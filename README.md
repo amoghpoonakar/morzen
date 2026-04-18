@@ -51,8 +51,6 @@ No frameworks, no build tools, no dependencies beyond the above CDN libraries.
 
 ## Project Structure
 
-
-morzen-main/
 ├── index.html
 └── assets/
     ├── home.html
