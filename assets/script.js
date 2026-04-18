@@ -93,7 +93,7 @@ function navigate(page) { window.location.href = page; }
 function guardPage() {
   const s = getState();
   if (!s.userName || s.selectedPrimaryCourses.length < 2) {
-    window.location.href = 'index.html'; return;
+    window.location.href = '../index.html'; return;
   }
   updateGoldDisplay();
   const pn = document.getElementById('profileName');
@@ -136,7 +136,7 @@ function updateName() {
 }
 function logout() {
   localStorage.clear();
-  window.location.href = 'index.html';
+  window.location.href = '../index.html';
 }
 
 // ===========================
