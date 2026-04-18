@@ -96,5 +96,6 @@ This project was developed as part of a hackathon and is focused on building the
 
 ### Teammates
 
+- Amogh Poonakar (Team Lead) - https://github.com/amoghpoonakar
 - Aluvala Sai Shailu Sri – https://github.com/aluvala-shailusri  
 - Yesireddy Mokshitha – https://github.com/yesireddymokshitha
