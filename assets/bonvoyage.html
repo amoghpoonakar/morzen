@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morzen — Bon Voyage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="app-body">
+
+    <nav class="sidebar">
+        <div class="sidebar-brand">M</div>
+        <div class="sidebar-links">
+            <button class="nav-btn" onclick="navigate('home.html')" title="Home">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    <polyline points="9,22 9,12 15,12 15,22" />
+                </svg>
+                <span class="nav-label">Home</span>
+            </button>
+            <button class="nav-btn" onclick="navigate('courses.html')" title="Courses">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+                </svg>
+                <span class="nav-label">Courses</span>
+            </button>
+            <button class="nav-btn active" onclick="navigate('bonvoyage.html')" title="Bon Voyage">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <polygon points="16.24,7.76 14.12,14.12 7.76,16.24 9.88,9.88 16.24,7.76" />
+                </svg>
+                <span class="nav-label">Bon Voyage</span>
+            </button>
+            <button class="nav-btn" onclick="navigate('chatbot.html')" title="O.R.O">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                </svg>
+                <span class="nav-label">O.R.O</span>
+            </button>
+        </div>
+        <div class="sidebar-bottom">
+            <button class="nav-btn" onclick="openProfile()" title="Profile">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+                <span class="nav-label">Profile</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <h1 class="page-title">BON VOYAGE ⚓</h1>
+        </div>
+        <div class="top-bar-right">
+            <div class="gold-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                    <circle cx="12" cy="12" r="10" />
+                </svg>
+                <span id="goldDisplay">0</span>
+            </div>
+            <button class="profile-btn" onclick="openProfile()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <!-- Pirate Header -->
+        <div class="bv-page-header">
+            <div class="bv-page-skull">☠</div>
+            <div>
+                <h2 class="bv-page-title">THE TREASURE MAP</h2>
+                <p class="bv-page-sub">Spend yer gold to unlock new seas, sailor! Unlocked courses appear in yer Courses
+                    section.</p>
+            </div>
+            <div class="bv-gold-chest">
+                <span>🪙</span>
+                <strong id="goldBannerAmt">0</strong>
+                <span style="font-size:0.7rem;color:var(--text-muted);letter-spacing:1px;">DOUBLOONS</span>
+            </div>
+        </div>
+
+        <!-- BV Grid -->
+        <div class="bv-full-grid" id="bvGrid"></div>
+    </main>
+
+    <!-- Profile Modal -->
+    <div id="profileModal" class="modal-overlay hidden">
+        <div class="modal-box profile-modal-box">
+            <button class="modal-close" onclick="closeProfile()">✕</button>
+            <div class="profile-avatar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="44" height="44">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+                    <circle cx="12" cy="7" r="4" />
+                </svg>
+            </div>
+            <h3 id="profileName">Agent</h3>
+            <p class="profile-sub">Morzen Operative</p>
+            <div class="profile-form">
+                <label>Update Identity</label>
+                <input type="text" id="profileNameInput" placeholder="New designation" />
+                <button class="btn-primary" onclick="updateName()">UPDATE</button>
+            </div>
+            <button class="btn-logout" onclick="logout()">⏻ LOGOUT</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>guardPage(); initBonVoyage();</script>
+</body>
+
+</html>

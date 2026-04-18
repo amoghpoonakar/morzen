@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Morzen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+    <div id="loginScreen" class="screen active">
+        <div class="login-box">
+            <div class="brand-logo">
+                <div class="logo-ring">
+                    <span class="logo-text">M</span>
+                </div>
+            </div>
+            <h1 class="brand-title">MORZEN</h1>
+            <p class="brand-sub">Advanced Personal AI Research & Intelligence Console</p>
+            <form id="loginForm">
+                <div class="input-group">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="nameInput" placeholder="Name" required />
+                </div>
+                <div class="input-group">
+                    <span class="input-icon">📡</span>
+                    <input type="email" id="emailInput" placeholder="E-Mail" required />
+                </div>
+                <div class="input-group">
+                    <span class="input-icon">🔐</span>
+                    <input type="password" id="passwordInput" placeholder="Password" required />
+                </div>
+                <button type="submit" class="btn-primary">INITIALIZE SYSTEM</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="selectionScreen" class="screen">
+        <div class="selection-box">
+            <div class="sel-header">
+                <h2>PROTOCOL SELECTION</h2>
+                <p class="selection-sub">Select <span class="highlight">2 Primary Modules</span> to initialize your
+                    learning matrix</p>
+            </div>
+            <div class="course-grid" id="courseGrid">
+                <div class="course-card" data-course="Python">
+                    <span class="cc-icon">🐍</span>
+                    <span class="cc-name">Python</span>
+                </div>
+                <div class="course-card" data-course="Web Dev">
+                    <span class="cc-icon">🌐</span>
+                    <span class="cc-name">Web Dev</span>
+                </div>
+                <div class="course-card" data-course="Java">
+                    <span class="cc-icon">☕</span>
+                    <span class="cc-name">Java</span>
+                </div>
+                <div class="course-card" data-course="App Dev">
+                    <span class="cc-icon">📱</span>
+                    <span class="cc-name">App Dev</span>
+                </div>
+                <div class="course-card" data-course="Software Dev">
+                    <span class="cc-icon">💻</span>
+                    <span class="cc-name">Software Dev</span>
+                </div>
+                <div class="course-card" data-course="AI Engineering">
+                    <span class="cc-icon">🤖</span>
+                    <span class="cc-name">AI Engineering</span>
+                </div>
+            </div>
+            <div class="sel-counter">
+                <span id="selCount">0</span>/2 modules selected
+            </div>
+            <button id="nextBtn" class="btn-disabled" disabled>ENGAGE →</button>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
