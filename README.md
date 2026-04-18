@@ -51,6 +51,7 @@ No frameworks, no build tools, no dependencies beyond the above CDN libraries.
 
 ## Project Structure
 
+```
 ├── index.html
 └── assets/
     ├── home.html
@@ -59,7 +60,7 @@ No frameworks, no build tools, no dependencies beyond the above CDN libraries.
     ├── chatbot.html
     ├── script.js
     └── style.css
-
+```
 
 ---
 
